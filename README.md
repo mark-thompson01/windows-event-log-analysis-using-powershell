@@ -62,7 +62,7 @@ In many production environments:
 
 - 🖥️ GUI access is limited or unavailable  
 - 🌐 Servers are managed remotely  
-- ⚡ Administrators need fast, scriptable insight into system behavior  
+- ⚡ Administrators need fast insight into system behavior  
 - 📁 Logs must be collected as **evidence**, not just viewed  
 
 This lab demonstrates how **PowerShell can be used as a primary event analysis tool**, not merely an alternative to Event Viewer.
