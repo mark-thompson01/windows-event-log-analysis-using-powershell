@@ -1,125 +1,105 @@
-#🧪 Windows Event Log Analysis Using PowerShell
-Overview
+# 🧪 Windows Event Log Analysis Using PowerShell
 
-This lab demonstrates how to analyze, filter, and export Windows Event Logs using PowerShell, without relying on the Event Viewer GUI.
+## 📖 Overview
 
-The goal is to showcase real-world systems administration and incident response workflows using console-first techniques that are applicable to Windows Server environments, remote administration scenarios, and security investigations.
+This lab demonstrates how to **analyze, filter, and export Windows Event Logs using PowerShell**, without relying on the Event Viewer GUI.
 
-All commands are designed to be:
+The goal is to showcase **real-world systems administration and incident response workflows** using console-first techniques that apply to Windows Server environments, remote administration scenarios, and security investigations.
 
-Practical
+All commands in this lab are designed to be:
 
-Reproducible
+- ✅ Practical  
+- 🔁 Reproducible  
+- 🛠️ Useful in real operational environments  
 
-Useful in real operational environments
+---
 
-Platform
+## 💻 Platform
 
-Windows Server 2022 (GUI or Core)
+- **Windows Server 2022** (GUI or Core)
+- **PowerShell** (run as Administrator)
 
-PowerShell (run as Administrator)
+> While demonstrated on Windows Server 2022, most commands also apply to modern Windows client systems.
 
-While demonstrated on Windows Server 2022, most commands also apply to modern Windows client systems.
+---
 
-Lab Objectives
+## 🎯 Lab Objectives
 
-Enumerate available Windows event logs
+- Enumerate available Windows event logs
+- Query **System** and **Security** logs using PowerShell
+- Filter events by:
+  - Event ID
+  - Time range
+  - Severity level
+  - Provider
+- Identify:
+  - Service failures
+  - System reboots
+  - Failed and successful logons
+  - Privileged logons
+  - After-hours activity
+  - Scheduled task execution
+- Export event data to CSV for reporting and documentation
+- Simulate real-world troubleshooting and incident response scenarios
 
-Query System and Security logs using PowerShell
+---
 
-Filter events by:
-
-Event ID
-
-Time range
-
-Severity level
-
-Provider
-
-Identify:
-
-Service failures
-
-System reboots
-
-Failed and successful logons
-
-Privileged logons
-
-After-hours activity
-
-Scheduled task execution
-
-Export event data to CSV for reporting and documentation
-
-Simulate real-world troubleshooting and incident response scenarios
-
-Why This Matters
+## ❓ Why This Matters
 
 In many production environments:
 
-GUI access is limited or unavailable
+- 🖥️ GUI access is limited or unavailable  
+- 🌐 Servers are managed remotely  
+- ⚡ Administrators need fast, scriptable insight into system behavior  
+- 📁 Logs must be collected as **evidence**, not just viewed  
 
-Servers are managed remotely
+This lab demonstrates how **PowerShell can be used as a primary event analysis tool**, not merely an alternative to Event Viewer.
 
-Administrators need fast, scriptable insight into system behavior
+---
 
-Logs must be collected as evidence, not just viewed
+## 🔍 What This Lab Covers
 
-This lab demonstrates how PowerShell can be used as a primary event analysis tool, not just an alternative to Event Viewer.
+### 🔹 Event Log Enumeration
 
-What This Lab Covers
-🔹 Event Log Enumeration
+- Listing all available event logs
+- Understanding log size, retention, and record counts
 
-Listing all available event logs
+---
 
-Understanding log size, retention, and record counts
+### 🔹 System Log Analysis
 
-🔹 System Log Analysis
+- Service start/stop activity
+- Unexpected shutdowns and reboots
+- System uptime tracking
+- Error and critical event identification
 
-Service start/stop activity
+---
 
-Unexpected shutdowns and reboots
+### 🔹 Security Log Analysis
 
-System uptime tracking
+- Failed logon attempts (**Event ID 4625**)
+- Successful logons (**Event ID 4624**)
+- Privileged logons (**Event ID 4672**)
+- Logon and logoff correlation
+- After-hours authentication activity
 
-Error and critical event identification
+---
 
-🔹 Security Log Analysis
+### 🔹 Troubleshooting & Investigation Scenarios
 
-Failed logon attempts (Event ID 4625)
+- Detecting service crashes
+- Identifying reboot causes
+- Reviewing system errors
+- Tracking scheduled task execution
+- Recognizing patterns across event IDs
 
-Successful logons (Event ID 4624)
+---
 
-Privileged logons (Event ID 4672)
+### 🔹 Reporting & Exporting
 
-Logon and logoff correlation
-
-After-hours authentication activity
-
-🔹 Troubleshooting & Investigation Scenarios
-
-Detecting service crashes
-
-Identifying reboot causes
-
-Reviewing system errors
-
-Tracking scheduled task execution
-
-Recognizing patterns across event IDs
-
-🔹 Reporting & Exporting
-
-Exporting filtered logs to CSV
-
-Creating artifacts suitable for:
-
-Incident response
-
-Change reviews
-
-Audit support
-
-Management reporting
+- Exporting filtered logs to CSV
+- Creating artifacts suitable for:
+  - 🛡️ Incident response
+  - 🔄 Change reviews
+  - 📋 Audit support
+  - 📊 Management reporting
