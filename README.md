@@ -21,6 +21,9 @@ All commands in this lab are designed to be:
 
 > While demonstrated on Windows Server 2022, most commands also apply to modern Windows client systems.
 
+<img width="1542" height="874" alt="image" src="https://github.com/user-attachments/assets/9f15757c-9a39-47f4-a19f-aed3291223bf" />
+
+
 ---
 
 ## 🎯 Lab Objectives
